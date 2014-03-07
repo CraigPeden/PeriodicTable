@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<title>Periodic Table</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="description" content="The periodic table of the elements.">
+    	<meta name="author" content="Craig Peden">
+
+    	<!-- Le styles -->
+    	<link href="css/bootstrap.css" rel="stylesheet">
+    	<link href="css/style.css" rel="stylesheet">   
+    	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    	<!--[if lt IE 9]>
+	    	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+	</head>
+
+	<body>
+
+	    <header class="navbar navbar-inverse navbar-fixed-top">
+	    	<div class="navbar-inner">
+	        	<nav class="container">
+		        	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			        	<span class="icon-bar"></span>
+			        	<span class="icon-bar"></span>
+			        	<span class="icon-bar"></span>
+			        </a>
+			        <a class="brand" href="#">PeriodicTable</a>
+			        <div class="nav-collapse collapse">
+				        <ul class="nav">
+					        <li class="name"><a href="#" class="toggle">Atomic Numbers</a></li>
+					        <li class="atomicno" style="display:none; width:136px;" style="display:none;">
+					        	<a href="#" class="toggle">Element Names</a>
+					        </li>
+					        <li>
+					        	<a href="#" class="togglecolouron">Colours</a>
+					        </li>
+						    <li class="togglecolouroff" style="display:none;">
+						    	<a href="#" class="colourtoggleoff">Colours</a>
+						    </li>
+						    <li>
+					        	<a href="#" class="togglegroupson">Groups</a>
+					        </li>
+						    <li class="togglegroupsoff" style="display:none;">
+						    	<a href="#" class="colourtoggleoff">Groups</a>
+						    </li>
+						    
+						 </ul>
+					</div><!--/.nav-collapse -->
+				</nav>
+			</div> <!-- /.header-inner -->
+		</header>
+	    
+		<div class="container" style="padding-top:20px;">
+			<div class="period groupsnameperiod" style="clear:both;">
+	    		<div class="element grouptitle left">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>1</b></p>
+	    		</div>
+	    		<div class="element grouptitle left">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>2</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>18</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>17</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>16</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>15</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>14</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>13</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>12</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>11</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>10</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>9</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>8</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>7</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>6</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>5</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>4</b></p>
+	    		</div>
+	    		<div class="element grouptitle right">
+	    			<p class="group">Group</p>
+	    			<p class="letter" ><b>3</b></p>
+	    		</div>
+	    		
+		    </div>
+
+    		<div class="leftside">
+		    	<div class="period">
+		    		<div class="element othermetals">
+		    			<p class="atomicno">1</p>
+		    			<p class="name" id="name">Hydrogen</p>
+		    			<p class="letter" ><b>H</b></p>
+		    			<p class="mass">1.008</p>
+		    		</div>
+		    	</div>
+		    	<div class="period">
+		    		<div class="element alkali">
+		    			<p class="atomicno">3</p>
+		    			<p class="name">Lithium</p>
+		    			<p class="letter" ><b>Li</b></p>
+		    			<p class="mass">6.94</p>
+		    		</div>
+		    		<div class="element alkaliearth">
+		    			<p class="atomicno">4</p>
+		    			<p class="name">Beryllium</p>
+		    			<p class="letter" ><b>Be</b></p>
+		    			<p class="mass">9.0122</p>
+		    		</div>
+		    	</div>
+		    	<div class="period">
+		    		<div class="element alkali">
+		    			<p class="atomicno">11</p>
+		    			<p class="name">Sodium</p>
+		    			<p class="letter" ><b>Na</b></p>
+		    			<p class="mass">22.990</p>
+		    		</div>
+		    		<div class="element alkaliearth">
+		    			<p class="atomicno">12</p>
+		    			<p class="name smallername">Magnesium</p>
+		    			<p class="letter" ><b>Mg</b></p>
+		    			<p class="mass">24.305</p>
+		    		</div>
+		    	</div>
+		    </div> <!-- /.leftside -->
+		    <div class="rightside">
+		    	<div class="period">
+		    		<div class="element right noble" style="float: right !important;">
+		    			<p class="atomicno">2</p>
+		    			<p class="name">Helium</p>
+		    			<p class="letter" ><b>He</b></p>
+		    			<p class="mass">4.0026</p>
+		    		</div>
+		    	</div>
+		    	<div class="period">
+		    		<div class="element othermetals">
+		    			<p class="atomicno">5</p>
+		    			<p class="name">Boron</p>
+		    			<p class="letter" ><b>B</b></p>
+		    			<p class="mass">10.81</p>
+		    		</div>
+		    		<div class="element othermetals">
+		    			<p class="atomicno">6</p>
+		    			<p class="name">Carbon</p>
+		    			<p class="letter" ><b>C</b></p>
+		    			<p class="mass">12.011</p>
+		    		</div>
+		    		<div class="element othermetals">
+		    			<p class="atomicno">7</p>
+		    			<p class="name">Nitrogen</p>
+		    			<p class="letter" ><b>N</b></p>
+		    			<p class="mass">14.007</p>
+		    		</div>
+		    		<div class="element othermetals">
+		    			<p class="atomicno">8</p>
+		    			<p class="name">Oxygen</p>
+		    			<p class="letter" ><b>O</b></p>
+		    			<p class="mass">15.999</p>
+		    		</div>
+		    		<div class="element halide">
+		    			<p class="atomicno">9</p>
+		    			<p class="name">Fluorine</p>
+		    			<p class="letter" ><b>F</b></p>
+		    			<p class="mass">18.998</p>
+		    		</div>
+		    		<div class="element noble">
+		    			<p class="atomicno">10</p>
+		    			<p class="name">Neon</p>
+		    			<p class="letter" ><b>Ne</b></p>
+		    			<p class="mass">20.180</p>
+		    		</div>	
+		    	</div>
+		    	<div class="period">
+		    		<div class="element right noble">
+		    			<p class="name">Argon</p>
+		    			<p class="atomicno">18</p>
+		    			<p class="letter" ><b>Ar</b></p>
+		    			<p class="mass">39.948</p>
+		    		</div>
+		    		<div class="element right halide">
+		    			<p class="name">Chlorine</p>
+		    			<p class="atomicno">17</p>
+		    			<p class="letter" ><b>Cl</b></p>
+		    			<p class="mass">35.45</p>
+		    		</div>
+		    		<div class="element right othermetals">
+		    			<p class="name">Sulphur</p>
+		    			<p class="atomicno">16</p>
+		    			<p class="letter" ><b>S</b></p>
+		    			<p class="mass">32.06</p>
+		    		</div>
+		    		<div class="element right othermetals">
+		    			<p class="name smallername">Phosphorus</p>
+		    			<p class="atomicno">15</p>
+		    			<p class="letter" ><b>P</b></p>
+		    			<p class="mass">30.974</p>
+		    		</div>
+		    		<div class="element right othermetals">
+		    			<p class="name">Silicon</p>
+		    			<p class="atomicno">14</p>
+		    			<p class="letter" ><b>Si</b></p>
+		    			<p class="mass">28.085</p>
+		    		</div>
+		    		<div class="element right poormetals">
+		    			<p class="name">Aluminium</p>
+		    			<p class="atomicno">13</p>
+		    			<p class="letter" ><b>Al</b></p>
+		    			<p class="mass">26.982</p>
+		    		</div>
+		    	</div>
+		    </div> <!-- /.rightside -->
+		    <div class="mainbox">
+		    	<div class="mainelement">
+		    		<div class="elementbig">
+		    			<p class="atomicno">6</p>
+		    			<p class="name">Carbon</p>
+		    			<p class="letter"><b>C</b></p>
+		    			<p class="mass">12.011</p>
+		    		</div>
+		    	</div>
+			    <div class="maininfo">
+	    			<table class="table" style="width: 80%;">
+		    			<tbody>
+			    			<tr>
+				    			<td>e<sup>-</sup> Config</td>
+				    			<td>1s<sup>2</sup>2s<sup>2</sup>2p<sup>2</sup></td>
+				    		</tr>
+				    		<tr>
+					    		<td>M.Point</td>
+					    		<td>Sublimes</td>
+					    	</tr>
+					    	<tr>
+					    		<td>M.Point</td>
+					    		<td>Sublimes</td>
+					    	</tr>
+					    	<tr>
+					    		<td>M.Point</td>
+					    		<td>Sublimes</td>
+					    	</tr>
+					    </tbody>
+					</table>
+		        </div>
+		    	<div class="colourkey" style="display:none;">
+		    		<p>
+		    			<span class="alkaline">Alkaline Metals</span> | <span class="alkalineearth">Alkali Earth Metals</span> | <span class="transitionmetals">Transition Metals</span> | <span class="poormetal">Poor Metals</span>
+		    			<br />
+		    			<span class="othermetal">Other Non-Metals</span> | <span class="halides">Halides</span> | <span class="nobles">Noble Gases</span> | <span class="lanthanoids1">Lanthanoids</span> | <span class="actinoids1">Actinoids</span>
+		    		</p>
+		        </div>
+		    </div>
+	    
+	    	<div class="period">
+	    		<div class="element alkali">
+	    			<p class="name">Potassium</p>
+	    			<p class="atomicno">19</p>
+	    			<p class="letter" ><b>K</b></p>
+	    			<p class="mass">39.098</p>
+	    		</div>
+	    		<div class="element alkaliearth">
+	    			<p class="name">Calcium</p>
+	    			<p class="atomicno">20</p>
+	    			<p class="letter" ><b>Ca</b></p>
+	    			<p class="mass">40.076</p>
+	    		</div>
+	    		<div class="element right noble">
+	    			<p class="name">Krypton</p>
+	    			<p class="atomicno">36</p>
+	    			<p class="letter" ><b>Kr</b></p>
+	    			<p class="mass">83.798</p>
+	    		</div>
+	    		<div class="element right halide">
+	    			<p class="name">Bromine</p>
+	    			<p class="atomicno">35</p>
+	    			<p class="letter" ><b>Br</b></p>
+	    			<p class="mass">79.904</p>
+	    		</div>
+	    		<div class="element right othermetals">
+	    			<p class="name">Selenium</p>
+	    			<p class="atomicno">34</p>
+	    			<p class="letter" ><b>Se</b></p>
+	    			<p class="mass">78.96</p>
+	    		</div>
+	    		<div class="element right othermetals">
+	    			<p class="name">Arsenic</p>
+	    			<p class="atomicno">33</p>
+	    			<p class="letter" ><b>As</b></p>
+	    			<p class="mass">74.922</p>
+	    		</div>
+	    		<div class="element right poormetals">
+	    			<p class="name smallname">Germanium</p>
+	    			<p class="atomicno">32</p>
+	    			<p class="letter" ><b>Ge</b></p>
+	    			<p class="mass">72.63</p>
+	    		</div>
+	    		<div class="element right poormetals">
+	    			<p class="name">Gallium</p>
+	    			<p class="atomicno">31</p>
+	    			<p class="letter" ><b>Ga</b></p>
+	    			<p class="mass">69.723</p>
+	    		</div>
+	    		<div class="element right poormetals">
+	    			<p class="name">Zinc</p>
+	    			<p class="atomicno">30</p>
+	    			<p class="letter" ><b>Zn</b></p>
+	    			<p class="mass">65.38</p>
+	    		</div>
+		    	<div class="element right trans">
+		    		<p class="name">Copper</p>
+		    		<p class="atomicno">29</p>
+		    		<p class="letter" ><b>Cu</b></p>
+		    		<p class="mass">63.546</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Nickel</p>
+		    		<p class="atomicno">28</p>
+		    		<p class="letter" ><b>Ni</b></p>
+		    		<p class="mass">58.693</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Cobalt</p>
+		    		<p class="atomicno">27</p>
+		    		<p class="letter" ><b>Co</b></p>
+		    		<p class="mass">58.933</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Iron</p>
+		    		<p class="atomicno">26</p>
+		    		<p class="letter" ><b>Fe</b></p>
+		    		<p class="mass">55.845</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name smallname">Manganese</p>
+		    		<p class="atomicno">25</p>
+		    		<p class="letter" ><b>Mn</b></p>
+		    		<p class="mass">54.938</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Chromium</p>
+		    		<p class="atomicno">24</p>
+		    		<p class="letter" ><b>Cr</b></p>
+		    		<p class="mass">51.996</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Vanadium</p>
+		    		<p class="atomicno">23</p>
+		    		<p class="letter" ><b>V</b></p>
+		    		<p class="mass">50.942</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Titanium</p>
+		    		<p class="atomicno">22</p>
+		    		<p class="letter" ><b>Ti</b></p>
+		    		<p class="mass">47.867</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Scandium</p>
+		    		<p class="atomicno">21</p>
+		    		<p class="letter" ><b>Sc</b></p>
+		    		<p class="mass">44.956</p>
+		    	</div>
+		    </div>
+		    <div class="period">
+		    	<div class="element alkali">
+		    		<p class="name">Rubidium</p>
+		    		<p class="atomicno">37</p>
+		    		<p class="letter" ><b>Rb</b></p>
+		    		<p class="mass">85.468</p>
+		    	</div>
+		    	<div class="element alkaliearth">
+		    		<p class="name">Strontium</p>
+		    		<p class="atomicno">38</p>
+		    		<p class="letter" ><b>Sr</b></p>
+		    		<p class="mass">87.62</p>
+		    	</div>
+		    	<div class="element right noble">
+		    		<p class="name">Xenon</p>
+		    		<p class="atomicno">54</p>
+		    		<p class="letter" ><b>Xe</b></p>
+		    		<p class="mass">131.29</p>
+		    	</div>
+		    	<div class="element right halide">
+		    		<p class="name">Iodine</p>
+		    		<p class="atomicno">53</p>
+		    		<p class="letter" ><b>I</b></p>
+		    		<p class="mass">126.90</p>
+		    	</div>
+		    	<div class="element right othermetals">
+		    		<p class="name">Tellurium</p>
+		    		<p class="atomicno">52</p>
+		    		<p class="letter" ><b>Te</b></p>
+		    		<p class="mass">127.60</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name">Antimony</p>
+		    		<p class="atomicno">51</p>
+		    		<p class="letter" ><b>Sb</b></p>
+		    		<p class="mass">121.76</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name">Tin</p>
+		    		<p class="atomicno">50</p>
+		    		<p class="letter" ><b>Sn</b></p>
+		    		<p class="mass">118.71</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name">Indium</p>
+		    		<p class="atomicno">49</p>
+		    		<p class="letter" ><b>In</b></p>
+		    		<p class="mass">114.82</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name">Cadmium</p>
+		    		<p class="atomicno">48
+		    		<p class="letter" ><b>Cd</b></p>
+		    		<p class="mass">112.41</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Silver</p>
+		    		<p class="atomicno">107.87</p>
+		    		<p class="letter" ><b>Ag</b></p>
+		    		<p class="mass">107.87</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Palladium</p>
+		    		<p class="atomicno">46</p>
+		    		<p class="letter" ><b>Pd</b></p>
+		    		<p class="mass">106.42</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Rhodium</p>
+		    		<p class="atomicno">45</p>
+		    		<p class="letter" ><b>Rh</b></p>
+		    		<p class="mass">102.91</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name smallname">Ruthenium</p>
+		    		<p class="atomicno">44</p>
+		    		<p class="letter" ><b>Ru</b></p>
+		    		<p class="mass">101.07</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name smallname">Technetium</p>
+		    		<p class="atomicno">43</p>
+		    		<p class="letter" ><b>Tc</b></p>
+		    		<p class="mass">[97.91]</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name smallername">Molybdenum</p>
+		    		<p class="atomicno">42</p>
+		    		<p class="letter" ><b>Mo</b></p>
+		    		<p class="mass">95.96</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Nioblum</p>
+		    		<p class="atomicno">41</p>
+		    		<p class="letter" ><b>Nb</b></p>
+		    		<p class="mass">92.906</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Zirconium</p>
+		    		<p class="atomicno">40</p>
+		    		<p class="letter" ><b>Zr</b></p>
+		    		<p class="mass">91.224</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Yttrium</p>
+		    		<p class="atomicno">39</p>
+		    		<p class="letter" ><b>Y</b></p>
+		    		<p class="mass">88.906</p>
+		    	</div>
+		    </div>
+		    <div class="period">
+		    	<div class="element alkali">
+		    		<p class="name">Caesium</p>
+		    		<p class="atomicno">55</p>
+		    		<p class="letter" ><b>Cs</b></p>
+		    		<p class="mass">132.91</p>
+		    	</div>
+		    	<div class="element alkaliearth">
+		    		<p class="name">Barium</p>
+		    		<p class="atomicno">56</p>
+		    		<p class="letter" ><b>Ba</b></p>
+		    		<p class="mass">137.33</p>
+		    	</div>
+		    	<div class="element right noble">
+		    		<p class="name">Radon</p>
+		    		<p class="atomicno">86</p>
+		    		<p class="letter" ><b>Rn</b></p>
+		    		<p class="mass">[222.02]</p>
+		    	</div>
+		    	<div class="element right halide">
+		    		<p class="name">Astatine</p>
+		    		<p class="atomicno">85</p>
+		    		<p class="letter" ><b>At</b></p>
+		    		<p class="mass">[209.99]</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name">Polonium</p>
+		    		<p class="atomicno">84</p>
+		    		<p class="letter" ><b>Po</b></p>
+		    		<p class="mass">[208.98]</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name">Bismuth</p>
+		    		<p class="atomicno">83</p>
+		    		<p class="letter" ><b>Bi</b></p>
+		    		<p class="mass">208.98</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name">Lead</p>
+		    		<p class="atomicno">82</p>
+		    		<p class="letter" ><b>Pb</b></p>
+		    		<p class="mass">207.2</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name">Thallium</p>
+		    		<p class="atomicno">81</p>
+		    		<p class="letter" ><b>Tl</b></p>
+		    		<p class="mass">204.38</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name">Mercury</p>
+		    		<p class="atomicno">80</p>
+		    		<p class="letter" ><b>Hg</b></p>
+		    		<p class="mass">200.59</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Gold</p>
+		    		<p class="atomicno">79</p>
+		    		<p class="letter" ><b>Au</b></p>
+		    		<p class="mass">196.97</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Platinum</p>
+		    		<p class="atomicno">78</p>
+		    		<p class="letter" ><b>Pt</b></p>
+		    		<p class="mass">195.08</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Iridium</p>
+		    		<p class="atomicno">77</p>
+		    		<p class="letter" ><b>Ir</b></p>
+		    		<p class="mass">192.22</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Osmium</p>
+		    		<p class="atomicno">76</p>
+		    		<p class="letter" ><b>Os</b></p>
+		    		<p class="mass">190.23</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Rhenium</p>
+		    		<p class="atomicno">75</p>
+		    		<p class="letter" ><b>Re</b></p>
+		    		<p class="mass">186.21</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Tungsten</p>
+		    		<p class="atomicno">74</p>
+		    		<p class="letter" ><b>W</b></p>
+		    		<p class="mass">183.84</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Tantalum</p>
+		    		<p class="atomicno">73</p>
+		    		<p class="letter" ><b>Ta</b></p>
+		    		<p class="mass">180.95</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Hafnium</p>
+		    		<p class="atomicno">72</p>
+		    		<p class="letter" ><b>Hf</b></p>
+		    		<p class="mass">178.49</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Lutetium</p>
+		    		<p class="atomicno">71</p>
+		    		<p class="letter" ><b>Lu</b></p>
+		    		<p class="mass">174.97</p>
+		    	</div>
+		    </div>
+		    <div class="period">
+		    	<div class="element alkali">
+		    		<p class="name">Francium</p>
+		    		<p class="atomicno">87</p>
+		    		<p class="letter" ><b>Fr</b></p>
+		    		<p class="mass">[223.02]</p>
+		    	</div>
+		    	<div class="element alkaliearth">
+		    		<p class="name">Radium</p>
+		    		<p class="atomicno">88</p>
+		    		<p class="letter" ><b>Ra</b></p>
+		    		<p class="mass">[226.03]</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name smallername">Ununoctium</p>
+		    		<p class="atomicno">118</p>
+		    		<p class="letter smallerletter" ><b>Uuo</b></p>
+		    		<p class="mass">[294]</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name smallername">Ununseptium</p>
+		    		<p class="atomicno">117</p>    		
+		    		<p class="letter smallerletter" ><b>Uus</b></p>
+		    		<p class="mass">[294]</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name smallername">Livermorium</p>
+		    		<p class="atomicno">116</p>
+		    		<p class="letter" ><b>Lv</b></p>
+		    		<p class="mass">[293]</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name smallername">Ununpentium</p>
+		    		<p class="atomicno">115</p>
+		    		<p class="letter smallerletter" ><b>Uup</b></p>
+		    		<p class="mass">[288.19]</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name">Flerovium</p>
+		    		<p class="atomicno">114</p>
+		    		<p class="letter" ><b>Fl</b></p>
+		    		<p class="mass">[289.19]</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name">Ununtrium</p>
+		    		<p class="atomicno">113</p>
+		    		<p class="letter smallerletter" ><b>Uut</b></p>
+		    		<p class="mass">[284.18]</p>
+		    	</div>
+		    	<div class="element right poormetals">
+		    		<p class="name smallername">Copernicium</p>
+		    		<p class="atomicno">112</p>
+		    		<p class="letter" ><b>Cn</b></p>
+		    		<p class="mass">[285.17]</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name smallername">Roentgenium</p>
+		    		<p class="atomicno">111</p>
+		    		<p class="letter" ><b>Rg</b></p>
+		    		<p class="mass">[280.16]</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name smallername">Darmstadtium</p>
+		    		<p class="atomicno">110</p>
+		    		<p class="letter" ><b>Ds</b></p>
+		    		<p class="mass">[281.16]</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name smallername">Meitnerium</p>
+		    		<p class="atomicno">109</p>
+		    		<p class="letter" ><b>Mt</b></p>
+		    		<p class="mass">[276.15]</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Hassium</p>
+		    		<p class="atomicno">108</p>
+		    		<p class="letter" ><b>Hs</b></p>
+		    		<p class="mass">[277.15]</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Bohrium</p>
+		    		<p class="atomicno">107</p>
+		    		<p class="letter" ><b>Bh</b></p>
+		    		<p class="mass">[270]</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name smallername">Seaborgium</p>
+		    		<p class="atomicno">106</p>
+		    		<p class="letter" ><b>Sg</b></p>
+		    		<p class="mass">[271.13]</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name">Dubnium</p>
+		    		<p class="atomicno">105</p>
+		    		<p class="letter" ><b>Db</b></p>
+		    		<p class="mass">[268.13]</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name smallername">Rutherfordium</p>
+		    		<p class="atomicno">104</p>
+		    		<p class="letter" ><b>Rf</b></p>
+		    		<p class="mass">[265.12]</p>
+		    	</div>
+		    	<div class="element right trans">
+		    		<p class="name smallername">Lawrencium</p>
+		    		<p class="atomicno">103</p>
+		    		<p class="letter" ><b>Lr</b></p>
+		    		<p class="mass">[262.11]</p>
+		    	</div>
+		    </div>
+		    <div class="period lanthanoid_gap">
+		    	<div class="element right" style="border-color: #fff !important; visibility: none;">
+		    	</div>
+		    	<div class="element right" style="border-color: #fff !important; visibility: none;">
+		    	</div>
+		    	<div class="element right lanthanoid">
+		    		<p class="name smallname">Ytterbium</p>
+		    		<p class="atomicno">70</p>
+		    		<p class="letter" ><b>Yb</b></p>
+		    		<p class="mass">173.05</p>
+		    	</div>
+		    	<div class="element right lanthanoid">
+		    		<p class="name">Thulium</p>
+		    		<p class="atomicno">69</p>
+		    		<p class="letter" ><b>Tm</b></p>
+		    		<p class="mass">168.93</p>
+		    	</div>
+		    	<div class="element right lanthanoid">
+		    		<p class="name">Erbium</p>
+		    		<p class="atomicno">68</p>
+		    		<p class="letter" ><b>Er</b></p>
+		    		<p class="mass">167.26</p>
+		    	</div>
+		    	<div class="element right lanthanoid">
+		    		<p class="name">Holmium</p>
+		    		<p class="atomicno">67</p>
+		    		<p class="letter" ><b>Ho</b></p>
+		    		<p class="mass">164.93</p>
+		    	</div>
+		    	<div class="element right lanthanoid">
+		    		<p class="name smallname">Dysprosium</p>
+		    		<p class="atomicno">66</p>
+		    		<p class="letter" ><b>Dy</b></p>
+		    		<p class="mass">162.50</p>
+		    	</div>
+		    	<div class="element right lanthanoid">
+		    		<p class="name">Terbium</p>
+		    		<p class="atomicno">65</p>
+		    		<p class="letter" ><b>Tb</b></p>
+		    		<p class="mass">158.93</p>
+		    	</div>
+		    	<div class="element right lanthanoid">
+		    		<p class="name smallname">Gadolinium</p>
+		    		<p class="atomicno">64</p>
+		    		<p class="letter" ><b>Gd</b></p>
+		    		<p class="mass">157.25</p>
+		    	</div>
+		    	<div class="element right lanthanoid">
+		    		<p class="name smallname">Europium</p>
+		    		<p class="atomicno">63</p>
+		    		<p class="letter" ><b>Eu</b></p>
+		    		<p class="mass">151.96</p>
+		    	</div>
+		    	<div class="element right lanthanoid">
+		    		<p class="name">Samarium</p>
+		    		<p class="atomicno">62</p>
+		    		<p class="letter" ><b>Sm</b></p>
+		    		<p class="mass">150.36</p>
+		    	</div>
+		    	<div class="element right lanthanoid">
+		    		<p class="name smallername">Promethium</p>
+		    		<p class="atomicno">61</p>
+		    		<p class="letter" ><b>Pm</b></p>
+		    		<p class="mass">[144.91]</p>
+		    	</div>
+		    	<div class="element right lanthanoid">
+		    		<p class="name smallername">Neodymium</p>
+		    		<p class="atomicno">60</p>
+		    		<p class="letter" ><b>Nd</b></p>
+		    		<p class="mass">144.24</p>
+		    	</div>
+		    	<div class="element right lanthanoid">
+		    		<p class="name smallername">Praseodymium</p>
+		    		<p class="atomicno">59</p>
+		    		<p class="letter" ><b>Pr</b></p>
+		    		<p class="mass">140.91</p>
+		    	</div>
+		    	<div class="element right lanthanoid">
+		    		<p class="name">Cerium</p>
+		    		<p class="atomicno">58</p>
+		    		<p class="letter" ><b>Ce</b></p>
+		    		<p class="mass">140.12</p>
+		    	</div>
+		    	<div class="element right lanthanoid">
+		    		<p class="name smallname">Lanthanum</p>
+		    		<p class="atomicno">57</p>
+		    		<p class="letter" ><b>La</b></p>
+		    		<p class="mass">138.91</p>
+		    	</div>
+		    	<h3 class="right">Lanthanoids</h3>
+		    </div>
+		    <div class="period actinoids">
+		    	<div class="element right" style="border-color: #fff !important; visibility: none;">
+		    	</div>
+		    	<div class="element right" style="border-color: #fff !important; visibility: none;">
+		    	</div>
+		    	<div class="element right actinoid">
+		    		<p class="name">Nobelium</p>
+		    		<p class="atomicno">102</p>
+		    		<p class="letter" ><b>No</b></p>
+		    		<p class="mass">[259.10]</p>
+		    	</div>
+		    	<div class="element right actinoid">
+		    		<p class="name smallername">Mendelevium</p>
+		    		<p class="atomicno">101</p>
+		    		<p class="letter" ><b>Md</b></p>
+		    		<p class="mass">[258.10]</p>
+		    	</div>
+		    	<div class="element right actinoid">
+		    		<p class="name">Fermium</p>
+		    		<p class="atomicno">100</p>
+		    		<p class="letter" ><b>Fm</b></p>
+		    		<p class="mass">[257.10]</p>
+		    	</div>
+		    	<div class="element right actinoid">
+		    		<p class="name smallname">Einsteinium</p>
+		    		<p class="atomicno">99</p>
+		    		<p class="letter" ><b>Es</b></p>
+		    		<p class="mass">[252.08]</p>
+		    	</div>
+		    	<div class="element right actinoid">
+		    		<p class="name smallname">Californium</p>
+		    		<p class="atomicno">98</p>
+		    		<p class="letter" ><b>Cf</b></p>
+		    		<p class="mass">[251.08]</p>
+		    	</div>
+		    	<div class="element right actinoid">
+		    		<p class="name">Berkelium</p>
+		    		<p class="atomicno">97</p>
+		    		<p class="letter" ><b>Bk</b></p>
+		    		<p class="mass">[247.07]</p>
+		    	</div>
+		    	<div class="element right actinoid">
+		    		<p class="name">Curium</p>
+		    		<p class="atomicno">96</p>
+		    		<p class="letter" ><b>Cm</b></p>
+		    		<p class="mass">[247.07]</p>
+		    	</div>
+		    	<div class="element right actinoid">
+		    		<p class="name smallname">Americium</p>
+		    		<p class="atomicno">95</p>
+		    		<p class="letter" ><b>Am</b></p>
+		    		<p class="mass">[243.06]</p>
+		    	</div>
+		    	<div class="element right actinoid">
+		    		<p class="name">Plutonium</p>
+		    		<p class="atomicno">94</p>
+		    		<p class="letter" ><b>Pu</b></p>
+		    		<p class="mass">[244.06]</p>
+		    	</div>
+		    	<div class="element right actinoid">
+		    		<p class="name">Neptunium</p>
+		    		<p class="atomicno">93</p>
+		    		<p class="letter" ><b>Np</b></p>
+		    		<p class="mass">[237.05]</p>
+		    	</div>
+		    	<div class="element right actinoid">
+		    		<p class="name">Uranium</p>
+		    		<p class="atomicno">92</p>
+		    		<p class="letter" ><b>U</b></p>
+		    		<p class="mass">238.03</p>
+		    	</div>
+		    	<div class="element right actinoid">
+		    		<p class="name smallername">Protactinium</p>
+		    		<p class="atomicno">91</p>
+		    		<p class="letter" ><b>Pa</b></p>
+		    		<p class="mass">231.04</p>
+		    	</div>
+		    	<div class="element right actinoid">
+		    		<p class="name">Thorium</p>
+		    		<p class="atomicno">90</p>
+		    		<p class="letter" ><b>Th</b></p>
+		    		<p class="mass">232.04</p>
+		    	</div>
+		    	<div class="element right actinoid">
+		    		<p class="name">Actinium</p>
+		    		<p class="atomicno">89</p>
+		    		<p class="letter" ><b>Ac</b></p>
+		    		<p class="mass">[227.03]</p>
+		    	</div>
+		    	<h3 class="right">Actinoids</h3>
+		    </div>
+	    </div> <!-- /container -->
+   
+	    <footer>
+		    <script src="js/jquery.js"></script>
+		    <script>
+				
+				$(".togglegroupson").click(function(){
+				    $(".groupsnameperiod").slideDown();
+				    $(".togglegroupson").toggle();
+					$(".togglegroupsoff").toggle();
+					event.preventDefault()
+				});
+				$(".togglegroupsoff").click(function(){
+				    $(".groupsnameperiod").slideUp();
+				    $(".togglegroupsoff").toggle();
+					$(".togglegroupson").toggle();
+					event.preventDefault()
+				});
+		 
+				$(".toggle").click(function () {
+					$(".name").toggle();
+					$(".atomicno").toggle();
+					event.preventDefault()
+				});
+				
+				$(".togglecolouron").click(function(){ 
+					$(".noble").css("background-color","red");
+					$(".halide").css("background-color","yellow");
+					$(".alkali").css("background-color","green");
+					$(".alkaliearth").css("background-color","olive");
+					$(".trans").css("background-color","#ff8100");
+					$(".actinoid").css("background-color","blue");
+					$(".lanthanoid").css("background-color","fuchsia");
+					$(".poormetals").css("background-color","lime");
+					$(".othermetals").css("background-color","grey");
+					$(".togglecolouron").toggle();
+					$(".togglecolouroff").toggle();
+					$(".colourkey").slideDown();
+					event.preventDefault()
+				});
+				
+				$(".togglecolouroff").click(function(){ 
+					$(".noble").css("background-color","white");
+					$(".halide").css("background-color","white");
+					$(".alkali").css("background-color","white");
+					$(".alkaliearth").css("background-color","white");
+					$(".trans").css("background-color","white");
+					$(".actinoid").css("background-color","white");
+					$(".lanthanoid").css("background-color","white");
+					$(".poormetals").css("background-color","white");
+					$(".othermetals").css("background-color","white");
+					$(".togglecolouron").toggle();
+					$(".togglecolouroff").toggle();
+					 $(".colourkey").slideUp();
+					event.preventDefault()
+				});
+			</script>
+	    </footer>
+	</body>
+</html>
